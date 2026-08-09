@@ -1,0 +1,51 @@
+name: Feature request
+description: Propose a focused improvement to CodeInquest.
+title: "[Feature]: "
+labels: []
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: What review gap, failure mode, or usability problem exists today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed improvement
+      description: Describe the smallest useful change.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Coverage or repository inventory
+        - Multi-agent orchestration
+        - Security or validation
+        - Authentication or authorization
+        - Payments or accounting
+        - Correctness or business logic
+        - Performance
+        - Code reduction or maintainability
+        - Infrastructure or dependencies
+        - AI or agent security
+        - Finding/report format
+        - Installation or compatibility
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Example or evidence
+      description: Show a concrete scenario where the current skill is insufficient.
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope check
+      options:
+        - label: This proposal does not intentionally weaken security, validation, financial-integrity, or accountable coverage requirements.
+          required: true
