@@ -1,0 +1,65 @@
+name: Bug report
+description: Report incorrect, incomplete, unsafe, or inconsistent CodeInquest behavior.
+title: "[Bug]: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping improve CodeInquest. Do not report security-sensitive vulnerabilities publicly; use SECURITY.md instead.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What went wrong?
+      description: Describe the observed behavior and why it is incorrect.
+      placeholder: Include the exact behavior you observed.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should CodeInquest have done instead?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Provide the prompt, repository shape, relevant files, or minimal scenario needed to reproduce the issue. Remove secrets and private data.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Coverage or repository inventory
+        - Multi-agent orchestration
+        - Security or validation
+        - Authentication or authorization
+        - Payments or accounting
+        - Correctness or business logic
+        - Performance
+        - Code reduction or maintainability
+        - Infrastructure or dependencies
+        - AI or agent security
+        - Finding/report format
+        - Installation or compatibility
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: agent
+    attributes:
+      label: Coding agent / runtime
+      placeholder: Claude Code, Codex, GitHub Copilot, etc.
+  - type: input
+    id: version
+    attributes:
+      label: CodeInquest commit or version
+      placeholder: Commit SHA or version if known
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Additional evidence
+      description: Logs, screenshots, excerpts, or other useful evidence. Remove secrets and private data.
